@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analyst Portfolio | Investigación & Proyectos</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        accent: '#2563eb',
+                        'accent-dark': '#1d4ed8',
+                        slate: {
+                            850: '#151F32',
+                            950: '#0B1120',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-200 min-h-screen flex flex-col font-sans antialiased">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-40 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2 font-bold text-lg tracking-tight text-slate-800 dark:text-white">
+                <i class="fa-solid fa-chart-line text-accent"></i>
+                <span>DataAnalyst<span class="text-accent">.io</span></span>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600 dark:text-slate-300">
+                <a href="#featured" class="hover:text-accent transition-colors">Investigación Destacada</a>
+                <a href="#proyectos" class="hover:text-accent transition-colors">Proyectos</a>
+                <a href="#about" class="hover:text-accent transition-colors">Sobre mí</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <!-- Badge de visitas -->
+                <div class="hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-xs text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-700">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    <span>Visitas:</span>
+                    <a href="https://github.com/ElizavetaaRB" target="_blank">
+                        <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Felizavetaarb.github.io&count_bg=%234F46E5&title_bg=%231E293B&icon=&icon_color=%23E7E7E7&title=&edge_flat=true" alt="Contador de visitas" style="vertical-align: middle; height: 16px;"/>
+                    </a>
+                </div>
+                <a href="https://www.buymeacoffee.com" target="_blank" rel="noopener noreferrer" 
+                   class="flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-amber-400 hover:bg-amber-500 text-slate-900 font-bold text-xs shadow-sm transition-all transform hover:-translate-y-0.5">
+                    <i class="fa-solid fa-mug-hot"></i>
+                    <span>Buy me a coffee</span>
+                </a>
+
+
+                <!-- Theme Toggle -->
+                <button id="theme-toggle" class="p-2 rounded-lg text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" aria-label="Cambiar Tema">
+                    <i class="fa-solid fa-sun hidden dark:block"></i>
+                    <i class="fa-solid fa-moon block dark:hidden"></i>
+                </button>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 py-3 space-y-2">
+            <a href="#featured" class="block py-2 text-slate-600 dark:text-slate-300 hover:text-accent font-medium">Investigación Destacada</a>
+            <a href="#proyectos" class="block py-2 text-slate-600 dark:text-slate-300 hover:text-accent font-medium">Proyectos</a>
+            <a href="#about" class="block py-2 text-slate-600 dark:text-slate-300 hover:text-accent font-medium">Sobre Mí</a>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-6xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-16">
+
+        <!-- 1. Hero Section -->
+        <section class="pt-4 text-center sm:text-left space-y-4">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-950/60 text-accent dark:text-blue-400 text-xs font-semibold">
+                <i class="fa-solid fa-database"></i> Análisis de Datos e Investigación
+            </div>
+            <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
+                Análisis de datos con lectura fácil para todos.
+            </h1>
+            <p class="text-slate-600 dark:text-slate-300 text-base sm:text-lg max-w-2xl leading-relaxed">
+                Especialización en la extracción, limpieza e interpretación de series temporales masivas. Mi objetivo es transformar conjuntos de datos en historias claras y paneles interactivos útiles.
+            </p>
+            <div class="flex flex-wrap items-center justify-center sm:justify-start gap-3 pt-2">
+                <a href="https://github.com/ElizavetaaRB" target="_blank" class="flex items-center gap-2 px-4 py-2 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-xs font-bold shadow-sm hover:opacity-90 transition-all">
+                    <i class="fa-brands fa-github text-sm"></i> GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/elizavetarb/" target="_blank" class="flex items-center gap-2 px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold shadow-sm transition-all">
+                    <i class="fa-brands fa-linkedin text-sm"></i> LinkedIn
+                </a>
+            </div>
+        </section>
+
+        <!-- 2. Featured Investigation (Estudio Eléctrico con Metrics Box) -->
+        <section id="featured" class="space-y-4">
+            <div class="flex items-center justify-between">
+                <h2 class="text-xl font-bold tracking-tight text-slate-900 dark:text-white flex items-center gap-2">
+                    <i class="fa-solid fa-star text-amber-400"></i> Investigación Principal
+                </h2>
+                <span class="text-xs text-slate-500 font-medium">Dataset Oficial REE (2016–2026)</span>
+            </div>
+            
+            <div class="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-slate-900 to-slate-800 text-white shadow-xl relative overflow-hidden border border-slate-700">
+                <div class="relative z-10 grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+                    
+                    <div class="lg:col-span-2 space-y-4">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2.5 py-1 rounded-md bg-emerald-500/20 text-emerald-300 text-xs font-semibold border border-emerald-500/30">Sector Eléctrico Peninsular</span>
+                            <span class="px-2.5 py-1 rounded-md bg-blue-500/20 text-blue-300 text-xs font-semibold border border-blue-500/30">Python API & ETL</span>
+                            <span class="px-2.5 py-1 rounded-md bg-amber-500/20 text-amber-300 text-xs font-semibold border border-amber-500/30">Peaje 2.0TD</span>
+                        </div>
+                        
+                        <h3 class="text-2xl sm:text-3xl font-extrabold leading-tight">
+                            ¿Cómo gastamos la luz en España? Estudio del consumo energético (2016–2026)
+                        </h3>
+                        
+                        <p class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-3xl">
+                            Investigación basada en más de 87.000 registros horarios de Red Eléctrica de España. Descubre por qué los picos estacionales de verano e invierno dominan el sistema y cómo la sociedad se ha adaptado al tramo Valle.
+                        </p>
+
+                        <div class="flex flex-wrap items-center gap-4 pt-2">
+                            <!-- Open Modal Button -->
+                            <button id="openModalBtn" class="px-5 py-2.5 rounded-xl bg-accent hover:bg-accent-dark text-white font-semibold text-sm shadow-lg shadow-blue-500/25 transition-all flex items-center gap-2">
+                                <i class="fa-solid fa-book-open"></i> Leer Informe Resumido
+                            </button>
+                            <!-- External Looker Studio Link -->
+                            <a href="https://datastudio.google.com/reporting/fcb1c364-d3b9-4ec0-b9cd-318a1a373f21" target="_blank" class="px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-sm border border-slate-600 transition-colors flex items-center gap-2">
+                                <i class="fa-solid fa-chart-pie"></i> Ver Dashboard en Data
+                            </a>
+                            <a href="https://github.com/ElizavetaaRB/Analisis-del-Consumo-Electrico" target="_blank" class="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-semibold text-xs border border-slate-700 transition-colors flex items-center gap-2">
+                                <i class="fa-brands fa-github"></i> Ver Análisis Completo
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Quick Metrics Box (Izquierda/Derecha adaptado según grid) -->
+                    <div class="bg-slate-800/80 p-5 rounded-2xl border border-slate-700/80 space-y-4">
+                        <div class="text-xs uppercase tracking-wider font-semibold text-slate-400 border-b border-slate-700 pb-2">
+                            Métricas Clave del Estudio
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <div class="text-2xl font-bold text-emerald-400">~50%</div>
+                                <div class="text-xs text-slate-400">Consumo en Tramo Valle</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold text-amber-400">Abril</div>
+                                <div class="text-xs text-slate-400">Mes Mínimo Anual</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold text-blue-400">Dom (12%)</div>
+                                <div class="text-xs text-slate-400">Mínimo Semanal</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl font-bold text-white">87.6K</div>
+                                <div class="text-xs text-slate-400">Horas Analizadas</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Proyectos y Repositorios Section con Buscador y Filtros -->
+        <section id="proyectos" class="space-y-6">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div>
+                    <h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                        <i class="fa-solid fa-folder-git-2 text-accent"></i> Proyectos y Repositorios
+                    </h2>
+                    <p class="text-sm text-slate-500 dark:text-slate-400">Explora investigaciones de datos y proyectos de análisis con código accesible.</p>
+                </div>
+            </div>
+
+            <!-- Buscador y Categorías de Filtro -->
+            <div class="bg-white dark:bg-slate-900 p-4 rounded-2xl border border-slate-200 dark:border-slate-800 space-y-4 shadow-sm">
+                <div class="flex flex-col md:flex-row gap-4 justify-between">
+                    <!-- Search Input -->
+                    <div class="relative flex-grow">
+                        <i class="fa-solid fa-search absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
+                        <input type="text" id="search-input" placeholder="Buscar proyecto o tecnología..." class="w-full pl-10 pr-4 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-sm text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-accent transition-all">
+                    </div>
+
+                    <!-- Category Filter Buttons -->
+                    <div class="flex items-center gap-2 overflow-x-auto pb-1 md:pb-0" id="filter-buttons">
+                        <button onclick="filterCategory('todos')" class="filter-btn active px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-accent text-white transition-colors whitespace-nowrap shadow-sm">
+                            Todos
+                        </button>
+                        <button onclick="filterCategory('Luz')" class="filter-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors whitespace-nowrap">
+                            ⚡ Luz & Energía
+                        </button>
+                        <button onclick="filterCategory('Terremoto')" class="filter-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors whitespace-nowrap">
+                            🌍 Terremotos
+                        </button>
+                        <button onclick="filterCategory('Videojuegos')" class="filter-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors whitespace-nowrap">
+                            🎮 Videojuegos
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grid de Proyectos -->
+            <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Proyecto 1: Luz -->
+                <article class="project-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between" data-category="Luz" data-keywords="luz energia ree python looker studio peaje 2.0td electricidad">
+                    <div class="p-5 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="px-2.5 py-1 rounded-full text-xs font-medium bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800">Luz</span>
+                            <span class="text-xs text-slate-400">2016 - 2026</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 dark:text-white text-base line-clamp-2">
+                            Análisis de Consumo Eléctrico en España (Peaje 2.0TD)
+                        </h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 line-clamp-3">
+                            Extracción vía API de Red Eléctrica (REE), categorización por festivos fijos y tramos horarios Punta, Llano y Valle.
+                        </p>
+                        <div class="flex flex-wrap gap-1.5 pt-1">
+                            <span class="px-2 py-0.5 text-[11px] bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 rounded">Google Sheets</span>
+                            <span class="px-2 py-0.5 text-[11px] bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 rounded">Data Studio</span>
+                        </div>
+                    </div>
+                    <div class="px-5 py-3 bg-slate-50 dark:bg-slate-800/40 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+                        <a href="https://github.com/ElizavetaaRB/Analisis-del-Consumo-Electrico" target="_blank" class="text-xs font-semibold text-accent hover:underline flex items-center gap-1">
+                            Ver Repositorio <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        </a>
+                        <i class="fa-brands fa-github text-slate-400"></i>
+                    </div>
+                </article>
+
+                <!-- Proyecto 2: Terremoto -->
+                <article class="project-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between" data-category="Terremoto" data-keywords="terremoto sismos ign geologia mapas folium python data science">
+                    <div class="p-5 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="px-2.5 py-1 rounded-full text-xs font-medium bg-amber-50 dark:bg-amber-950/60 text-amber-600 dark:text-amber-400 border border-amber-200 dark:border-amber-800">Terremoto</span>
+                            <span class="text-xs text-slate-400">1406 – 2026</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 dark:text-white text-base line-clamp-2">
+                            Análisis de la Sismicidad en el Sur de Andalucía y Mar de Alborán
+                        </h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 line-clamp-3">
+                            Homogeneización histórica del catálogo e implementación de un filtro para la separación de sismicidad de fondo y enjambres/réplicas en Tableau.
+                        </p>
+                        <div class="flex flex-wrap gap-1.5 pt-1">
+                            <span class="px-2 py-0.5 text-[11px] bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 rounded">Tableu</span>
+                        </div>
+                    </div>
+                    <div class="px-5 py-3 bg-slate-50 dark:bg-slate-800/40 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+                        <a href="https://github.com/ElizavetaaRB/TerremotosAndaluciaS" target="_blank" class="text-xs font-semibold text-accent hover:underline flex items-center gap-1">
+                            Ver Repositorio <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        </a>
+                        <i class="fa-brands fa-github text-slate-400"></i>
+                    </div>
+                </article>
+
+                <!-- Proyecto 3: Videojuegos -->
+                <article class="project-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between" data-category="Videojuegos" data-keywords="videojuegos steam gaming ventas metacritic reviews python machine learning">
+                    <div class="p-5 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="px-2.5 py-1 rounded-full text-xs font-medium bg-purple-50 dark:bg-purple-950/60 text-purple-600 dark:text-purple-400 border border-purple-200 dark:border-purple-800">Videojuegos</span>
+                            <span class="text-xs text-slate-400">Gaming Data</span>
+                        </div>
+                        <h3 class="font-bold text-slate-900 dark:text-white text-base line-clamp-2">
+                            Análisis de Mortal Shell 2
+                        </h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 line-clamp-3">
+                            Estudio del comportamiento de la base de jugadores de Mortal Shell 2 durante sus primeros 30 días tras el lanzamiento
+                        </p>
+                        <div class="flex flex-wrap gap-1.5 pt-1">
+                            <span class="px-2 py-0.5 text-[11px] bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 rounded">PowerBI</span>
+                        </div>
+                    </div>
+                    <div class="px-5 py-3 bg-slate-50 dark:bg-slate-800/40 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+                        <a href="https://github.com/ElizavetaaRB/AnalisisMortalShell2" target="_blank" class="text-xs font-semibold text-accent hover:underline flex items-center gap-1">
+                            Ver Repositorio <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                        </a>
+                        <i class="fa-brands fa-github text-slate-400"></i>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Mensaje Sin Resultados -->
+            <div id="no-results" class="hidden text-center py-10 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800">
+                <i class="fa-solid fa-search-minus text-slate-400 text-2xl mb-2"></i>
+                <p class="text-slate-600 dark:text-slate-400 font-medium text-sm">No se encontraron proyectos con ese criterio de búsqueda.</p>
+            </div>
+        </section>
+
+        <!-- 4. Sobre Mí Section -->
+        <section id="about" class="scroll-mt-20">
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 sm:p-8 space-y-6 shadow-sm">
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 rounded-2xl bg-blue-100 dark:bg-blue-950 flex items-center justify-center text-accent font-bold text-lg">
+                        ER
+                    </div>
+                    <div>
+                        <h2 class="text-xl font-bold text-slate-900 dark:text-white">Sobre mí</h2>
+                        <p class="text-xs text-slate-500 dark:text-slate-400">Analista de Datos & Investigadora Independiente</p>
+                    </div>
+                </div>
+
+                <div class="space-y-3 text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                    <p>
+                        Me dedico a explorar grandes conjuntos de datos para extraer patrones sencillos y comprensibles. Creo firmemente que los informes técnicos no tienen por qué ser aburridos ni indescifrables para el público general.
+                    </p>
+                </div>
+
+                <div class="pt-4 border-t border-slate-100 dark:border-slate-800 flex flex-wrap items-center justify-between gap-4">
+                    <div class="flex items-center gap-4 text-xs font-medium text-slate-500">
+                        <span class="flex items-center gap-1"><i class="fa-solid fa-code text-accent"></i> Python, R, Matblab & SQL</span>
+                        <span class="flex items-center gap-1"><i class="fa-solid fa-chart-pie text-blue-500"></i> Data Studio, Tableu, PowerBI</span>
+                        <span class="flex items-center gap-1"><i class="fa-solid fa-code-branch text-emerald-500"></i> Git & GitHub</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <a href="https://www.linkedin.com/in/elizavetarb/" target="_blank" class="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-accent transition-colors">
+                            <i class="fa-brands fa-linkedin text-sm"></i>
+                        </a>
+                        <a href="https://github.com/ElizavetaaRB" target="_blank" class="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-accent transition-colors">
+                            <i class="fa-brands fa-github text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Modal con el Resumen Divulgativo -->
+    <div id="summaryModal" class="fixed inset-0 z-50 bg-slate-950/70 backdrop-blur-sm flex items-center justify-center p-4 hidden opacity-0 transition-opacity duration-200">
+        <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl max-w-2xl w-full max-h-[85vh] flex flex-col shadow-2xl overflow-hidden">
+            <!-- Modal Header -->
+            <div class="p-5 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-bolt text-amber-500"></i>
+                    <h3 class="font-bold text-slate-900 dark:text-white text-lg">¿Cómo gastamos la luz en España?</h3>
+                </div>
+                <button id="closeModalBtn" class="p-2 rounded-xl text-slate-400 hover:text-slate-600 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <!-- Modal Body -->
+            <div class="p-6 overflow-y-auto space-y-4 text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                <p class="text-base font-semibold text-slate-900 dark:text-white">
+                    Durante los últimos 10 años he estudiado cómo consumimos la electricidad en España. Y la conclusión es muy sencilla: <span class="text-accent">somos bastante previsibles y nos portamos bien con el ahorro</span>.
+                </p>
+
+                <div class="space-y-3 pt-2">
+                    <div class="p-4 bg-slate-50 dark:bg-slate-800/50 rounded-2xl border border-slate-100 dark:border-slate-800 space-y-1">
+                        <h4 class="font-bold text-slate-900 dark:text-white">1. El calor y el frío mandan</h4>
+                        <p class="text-xs">El consumo de luz sube siempre en dos momentos del año: en <strong>enero</strong> (por la calefacción) y en <strong>julio y agosto</strong> (por el aire acondicionado). Por el contrario, <strong>abril</strong> destaca como el mes más suave y de menor consumo.</p>
+                    </div>
+
+                    <div class="p-4 bg-slate-50 dark:bg-slate-800/50 rounded-2xl border border-slate-100 dark:border-slate-800 space-y-1">
+                        <h4 class="font-bold text-slate-900 dark:text-white">2. ¡Aprovechamos las horas baratas!</h4>
+                        <p class="text-xs">Casi el 50% de toda la luz que gastamos se concentra en el tramo <strong>Valle</strong> (noches y fines de semana), lo que demuestra que los hogares adaptan sus electrodomésticos para cuidar el bolsillo.</p>
+                    </div>
+
+                    <div class="p-4 bg-slate-50 dark:bg-slate-800/50 rounded-2xl border border-slate-100 dark:border-slate-800 space-y-1">
+                        <h4 class="font-bold text-slate-900 dark:text-white">3. ¿Qué días gastamos más y cuáles menos?</h4>
+                        <p class="text-xs">De lunes a viernes el consumo se mantiene estable con ligeros repuntes a mitad de semana (miércoles y jueves), mientras que el <strong>domingo</strong> registra el mínimo semanal (aprox. 12%).</p>
+                    </div>
+
+                    <div class="p-4 bg-slate-50 dark:bg-slate-800/50 rounded-2xl border border-slate-100 dark:border-slate-800 space-y-1">
+                        <h4 class="font-bold text-slate-900 dark:text-white">4. ¿Gastamos más que antes?</h4>
+                        <p class="text-xs">No. A pesar de contar con muchos más dispositivos tecnológicos en casa, el consumo total físico en España se mantiene muy estable desde hace una década. (Nota: este estudio analiza consumo físico en MWh, no las variaciones de precio en la factura).</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal Footer -->
+            <div class="p-4 border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-850 flex justify-end">
+                <button id="closeModalFooterBtn" class="px-4 py-2 bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 dark:hover:bg-slate-600 text-slate-800 dark:text-white font-medium text-xs rounded-xl transition-colors">
+                    Cerrar Resumen
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer & Support Widget -->
+    <footer class="mt-auto border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <!-- Brand & Pitch -->
+                <div class="text-center md:text-left space-y-2">
+                    <div class="font-bold text-slate-900 dark:text-white text-lg">
+                        DataAnalyst<span class="text-accent">.io</span>
+                    </div>
+                    <p class="text-xs text-slate-500 max-w-sm">
+                        Investigación transparente e independiente de datos. Publicado con GitHub Pages.
+                    </p>
+                </div>
+                <!-- Support Box -->
+                <div class="flex flex-col sm:flex-row items-center gap-3 bg-slate-50 dark:bg-slate-800 p-4 rounded-2xl border border-slate-200 dark:border-slate-700">
+                    <div class="text-xs text-slate-600 dark:text-slate-300 text-center sm:text-left">
+                        <span class="font-semibold block">¿Te ha sido útil la investigación?</span>
+                        <span>Puedes apoyar mi trabajo independiente:</span>
+                    </div>
+                    <a href="https://www.buymeacoffee.com" target="_blank" class="px-4 py-2 rounded-xl bg-amber-400 hover:bg-amber-500 text-slate-900 font-bold text-xs shadow-sm flex items-center gap-2 shrink-0 transition-all">
+                        <i class="fa-solid fa-mug-hot"></i> Invítame a un café
+                    </a>
+                </div>
+            </div>
+            <div class="pt-6 border-t border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+                <div>© 2026 DataAnalyst. Todos los derechos reservados.</div>
+                <div class="flex items-center gap-4">
+                    <a href="https://github.com/ElizavetaaRB" class="hover:text-accent">GitHub</a>
+                    <a href="https://www.linkedin.com/in/elizavetarb/" class="hover:text-accent">LinkedIn</a>
+                    <a href="#about" class="hover:text-accent">Volver arriba ↑</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts de Funcionalidad -->
+    <script>
+        // Alternar Tema (Claro / Oscuro)
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        themeToggleBtn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+        });
+
+        // Menú Móvil
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Modal de Resumen Divulgativo
+        const modal = document.getElementById('summaryModal');
+        const openModalBtn = document.getElementById('openModalBtn');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+        const closeModalFooterBtn = document.getElementById('closeModalFooterBtn');
+
+        function openModal() {
+            modal.classList.remove('hidden');
+            setTimeout(() => modal.classList.remove('opacity-0'), 10);
+        }
+        function closeModal() {
+            modal.classList.add('opacity-0');
+            setTimeout(() => modal.classList.add('hidden'), 200);
+        }
+
+        if(openModalBtn) openModalBtn.addEventListener('click', openModal);
+        if(closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
+        if(closeModalFooterBtn) closeModalFooterBtn.addEventListener('click', closeModal);
+
+        // Filtros por Categoría y Buscador de Proyectos
+        const searchInput = document.getElementById('search-input');
+        const projectCards = document.querySelectorAll('.project-card');
+        const noResults = document.getElementById('no-results');
+        const filterBtns = document.querySelectorAll('.filter-btn');
+
+        let activeCategory = 'todos';
+
+        window.filterCategory = function(cat) {
+            activeCategory = cat;
+            
+            // Actualizar estilos visuales de botones activos
+            filterBtns.forEach(btn => {
+                btn.classList.remove('bg-accent', 'text-white', 'shadow-sm');
+                btn.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-300');
+            });
+
+            event.currentTarget.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-600', 'dark:text-slate-300');
+            event.currentTarget.classList.add('bg-accent', 'text-white', 'shadow-sm');
+
+            applyFilters();
+        }
+
+        function applyFilters() {
+            const query = searchInput.value.toLowerCase().trim();
+            let visibleCount = 0;
+
+            projectCards.forEach(card => {
+                const category = card.getAttribute('data-category');
+                const keywords = card.getAttribute('data-keywords').toLowerCase();
+
+                const matchesCategory = (activeCategory === 'todos' || category === activeCategory);
+                const matchesSearch = keywords.includes(query);
+
+                if (matchesCategory && matchesSearch) {
+                    card.classList.remove('hidden');
+                    visibleCount++;
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+
+            if (visibleCount === 0) {
+                noResults.classList.remove('hidden');
+            } else {
+                noResults.classList.add('hidden');
+            }
+        }
+
+        if(searchInput) searchInput.addEventListener('input', applyFilters);
+    </script>
+</body>
+</html>
